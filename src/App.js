@@ -5,21 +5,23 @@ import { SecondComponent } from "./components/SecondComponent";
 
 function App() {
   const [show, setShow] = useState(true); // Initialize state 'show' to true and create a function to update it
-
+  const [show2, setShow2] = useState(false);
   return (
     <div>
       {/* Button to remove the component by setting 'show' to false */}
       <button onClick={() => setShow(false)}>Remove Component</button>
+      <button onClick={() => setShow(false)}>Create Component</button>
       <br />
       <br />
       <br />
       <br />
       {/* Conditionally render MyComponent based on the value of 'show' */}
       {show && (
-        <>
-        <MyComponent /> 
-        <SecondComponent />
-        </>
+          <MyComponent />
+      )}
+
+      {!show && (
+          <SecondComponent />
       )}
     </div>
   );
