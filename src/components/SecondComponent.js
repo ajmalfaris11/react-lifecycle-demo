@@ -10,7 +10,11 @@ export function SecondComponent() {
             console.log("Number Incremented"); // Log message when number is incremented
         }, 1000);
 
+
+// -----------------------------------------------------------------------------------------------------------
         return () => clearInterval(interval); // Clear interval on component unmount to avoid memory leaks
+// -----------------------------------------------------------------------------------------------------------
+
     }, []); // Empty dependency array ensures useEffect runs only once on mount
 
     return (

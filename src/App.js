@@ -10,7 +10,7 @@ function App() {
     <div>
       {/* Button to remove the component by setting 'show' to false */}
       <button onClick={() => setShow(false)}>Remove Component</button>
-      <button onClick={() => setShow2(show => !show2)}>{show2?"Remove Timer" : "Start Timer"} Component</button>
+      <button onClick={() => setShow2(show2 => !show2)}>{show2?"Remove Timer" : "Start Timer"} Component</button>
       <br />
       <br />
       <br />
